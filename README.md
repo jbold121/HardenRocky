@@ -22,25 +22,27 @@ This project simulates enterprise Linux server hardening and security engineerin
 
 <h2>Program walk-through:</h2>
 
-<p align ="center"> OpenSCAP and SSH </p> <br/>
-<p align="center"> Update the system to ensure all packages are current before performing compliance scanning. <br/> <img src="images/update (1).png" height="40%" width="40%" alt="System Update" /> <br /><br /> </p>
-<p align="center"> Install OpenSCAP scanner and SCAP Security Guide content required for CIS evaluation. <br/> <img src="images/scap install (2).png" height="70%" width="70%" alt="OpenSCAP Installation" /> <br /> <img src="images/scap install 2 (3).png" height="80%" width="80%" alt="OpenSCAP Installation Complete" /> <br /><br /> </p>
-<p align="center"> Inspect available compliance profiles within the SCAP datastream. <br/> <img src="images/search profiles (4).png" height="80%" width="80%" alt="Search CIS Profiles" /> <br /><br /> </p>
-<p align="center"> Execute initial CIS Level 1 scan to establish compliance baseline. <br/> <img src="images/baseline scan (5).png" height="100%" width="100%" alt="CIS Baseline Scan" /> <br /><br /> </p>
-<p align="center"> Baseline report showing 116 failed rules and ~79% compliance score prior to remediation. <br/> <img src="images/scan report html (6).png" height="80%" width="80%" alt="Baseline HTML Report" /> <br /><br /> </p>
-<p align="center"> Generate automated remediation script for CIS Level 1 profile. <br/> <img src="images/remediation script (7).png" height="100%" width="100%" alt="Generate Remediation Script" /> <br /><br /> </p>
-<p align="center"> Generate list of SSH rules for custom SSH remediation script <br/> <img src="images/ssh rules.png" height="100%" width="100%" alt="Generate Remediation Script" /> <br /><br /> </p>
+<p align ="center"> 1. OpenSCAP and SSH </p> <br/>
+<p align="center"> Update the system to ensure all packages are current before performing compliance scanning. <br/> <img src="images/update (1).png" height="40%" width="40%" /> <br /><br /> </p>
+<p align="center"> Install OpenSCAP scanner and SCAP Security Guide content required for CIS evaluation. <br/> <img src="images/scap install (2).png" height="70%" width="70%" alt="OpenSCAP Installation" /> <br /> <img src="images/scap install 2 (3).png" height="80%" width="80%" /> <br /><br /> </p>
+<p align="center"> Inspect available compliance profiles within the SCAP datastream. <br/> <img src="images/search profiles (4).png" height="80%" width="80%" /> <br /><br /> </p>
+<p align="center"> Execute initial CIS Level 1 scan to establish compliance baseline. <br/> <img src="images/baseline scan (5).png" height="100%" width="100%" /> <br /><br /> </p>
+<p align="center"> Baseline report showing 116 failed rules and ~79% compliance score prior to remediation. <br/> <img src="images/scan report html (6).png" height="80%" width="80%" /> <br /><br /> </p>
+<p align="center"> Generate automated remediation script for CIS Level 1 profile. <br/> <img src="images/remediation script (7).png" height="100%" width="100%" /> <br /><br /> </p>
+<p align="center"> Generate list of SSH rules for custom SSH remediation script <br/> <img src="images/ssh rules.png" height="100%" width="100%" /> <br /><br /> </p>
 <p align="center"> Generate ed25519 key pair for secure SSH key-only authentication and deploy to authorized_keys <br/> <img src="images/ssh key gen.png" height="60%" width="60%" alt="SSH Key Generation" /> <br /><br /> </p>
 <p align="center"> Execute custom SSH-only remediation script derived from full CIS remediation output. <br/> <img src="images/ssh-eval script (12).png" height="60%" width="60%" alt="SSH Remediation Script Execution" /> <br /><br /> </p>
-<p align="center"> Results from SSH-only remediation script <br/> <img src="images/ssh eval (13).png" height="60%" width="60%" alt="SSH Key Generation" /> <br /><br /> </p>
-<p align="center"> Verify SSH access post-remediation. <br/> <img src="images/ssh access post rem(10).png" height="50%" width="50%" alt="SSH Access Post Remediation" /> <br /><br /> </p>
+<p align="center"> Results from SSH-only remediation script <br/> <img src="images/ssh eval (13).png" height="60%" width="60%" /> <br /><br /> </p>
+<p align="center"> Verify SSH access post-remediation. <br/> <img src="images/ssh access post rem(10).png" height="50%" width="50%" /> <br /><br /> </p>
 
-<!--
- ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
---!>
+<p align ="center"> 2. Auditd </p> <br/>
+
+<p align="center"> Verify auditd service status <br/> <img src="images/auditd status.png" height="80%" width="80%"/> <br /><br /> </p>
+<p align="center"> Configure log retention <br/> <img src="images/log retention conf.png" height="80%" width="80%" /> <br /><br /> </p>
+<p align="center"> Create dedicated file with rules <br/> <img src="images/cis rules.png" height="60%" width="60%" /> <br /><br /> </p>
+<p align="center"> Create rule set <br/> <img src="images/auditd rules.png" height="80%" width="80%" /> <br /><br /> </p>
+<p align="center"> Load rule set <br/> <img src="images/augenrules load.png" height="50%" width="50%" /> <br /><br /> </p>
+<p align="center"> Verify rules are laoded <br/> <img src="images/verify audit rules.png" height="80%" width="80%" /> <br /><br /> </p>
+<p align="center"> Test rules by creating events <br/> <img src="images/test rules 1.png" height="60%" width="60%" /> <br /><br /> </p>
+<p align="center"> Search events <br/> <img src="images/test rules 2.png" height="60%" width="60%" /> <br /> </p>
+<p align="center"> <img src="images/test rules 3.png" height="80%" width="80%" /> <br /><br /> </p>
