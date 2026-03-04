@@ -60,6 +60,12 @@ This project simulates enterprise Linux server hardening and security engineerin
 <p align="center"> Initialize AIDE scan and promote the new database <br/> <img src="images/initialize.png" height="80%" width="80%" /> <br /> </p>
 <p align="center"> <img src="images/promote.png" height="80%" width="80%" /> <br /> </p>
 <p align="center"> Test a check against the new database <br/> <img src="images/check.png" height="80%" width="80%" /> <br /> </p>
+<p align="center"> Testing the evaluation of AIDE rules show two were remediated, while verifying audit tools and crontab failed <br/> <img src="images/aide eval 1.png" height="80%" width="80%" /> <br /> </p>
+<p align="center"> Rsyslogd rule was missing, so I added an rsyslogd rule to aide.conf <br/> <img src="images/verify audit tools 2.png" height="50%" width="50%" /> <br /> </p>
+<p align="center"> Although I created a timer using systemd, the OSCAP rule is looking for a root crontab entry <br/> <img src="images/chrontab.png" height="80%" width="80%" /> <br /> </p>
+<p align="center"> Evaluated the AIDE rules again, this time with a pass <br/> <img src="images/aide eval 2.png" height="80%" width="80%" /> <br /> </p>
+
+
 
 
 
